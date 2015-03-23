@@ -181,11 +181,11 @@
 			//是否静音
 			this.className["volume"].addEventListener("click",function(){
 				if(audio.muted){
-					this.style.color = "black";
+					this.style.color = "red";
 					this.innerHTML = "音量开";
 					audio.muted = false;
 				}else{
-					this.style.color = "red";
+					this.style.color = "black";
 					this.innerHTML = "音量关";
 					audio.muted = true;
 				}
@@ -298,8 +298,8 @@
 			audio.load();
 			audio.addEventListener('canplay',this.bufferBar.bind(this),false);
 			audio.play();
-			removeClass($('.pause'),'hidden');
-			addClass($('.play'),'hidden');
+			addClass($('.play'),'pause');
+			addClass($('.rotate'),'rotate_run');
 		},
 		//播放模式切换
 		changeMusicMode:function(dom,mode){
