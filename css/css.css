@@ -1,0 +1,235 @@
+/* css reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+:focus {
+	outline: 1;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none; 
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+a:hover{
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+     transition: 0.4s;
+     opacity: 0.8;
+    -moz-opacity: 0.8;
+     filter:alpha(opacity=8);
+}
+*, ::after, ::before {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+*,:focus{
+    outline:0px;
+}
+/* reset end */
+
+/*进度条*/
+.progress{
+    width: 100%;
+    background: #B8B8B8;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0
+}
+.progress_now {
+    background: #3F3E3E;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+.progress_buf{
+    background: #747474;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    left: 0px;
+    top: 0px;
+}
+/*歌曲封面*/
+.box{
+	width: 320px;
+	margin: 0px auto;
+}
+#musicBox{
+	margin-top: 50px;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	position: relative;
+}
+#musicBox img{
+	border-radius: 300px 300px 300px 300px;
+	width: 300px;
+	height: 300px;
+}
+/*播放/暂停*/
+.play{ 
+	position: absolute;
+	left: 50%;
+	margin-left: -34px;
+	top: 168px;
+	display: block;
+	cursor: pointer;
+	background: url(../images/playCtl.png) no-repeat -200px 0;
+	width: 69px;
+	height: 69px;
+}
+.play em{ 
+	display:block; 
+	background:url(../images/playCtl.png) no-repeat -28px -24px; 
+	width:22px; 
+	height:22px; 
+	margin:25px 0 0 28px; 
+	float:left;
+}
+.pause em{ 
+	background-position:-123px -24px; 
+	margin-left:24px;
+}
+/*转动*/
+.rotate{
+	-webkit-animation:rotate 9.5s infinite linear;
+	-webkit-animation-play-state:paused;
+}
+.rotate_run{
+	-webkit-animation: rotate 9.5s infinite linear;
+	-webkit-animation-play-state:running;
+}
+/*时间*/
+.time{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+/*歌曲描述信息*/
+.track-details {
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    height: 20px;
+    width: 290px;
+    padding: 1px 6px;
+    background: #eee;
+    color: #222;
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 20px;
+    -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+/*播放模式*/
+.control{
+    margin-top: 10px;
+    text-align: center;
+}
+/*隐藏*/
+.hidden{
+    display: none;
+}
+/*动作*/
+@-webkit-keyframes rotate{
+ 	0%{
+	 	-webkit-transform : rotate(0deg);
+ 	}    
+ 	100%{
+	 	-webkit-transform : rotate(360deg);
+ 	}
+}
+

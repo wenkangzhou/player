@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Music Player</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/css.css">     
+     </head>
+     <body>
+        <div class="progress">
+            <div class="progress_now"></div>
+            <div class="progress_buf" ></div>
+        </div>
+        <div class="box">
+       		<div id="musicBox">
+                <div class="round_wrapper rotate">
+                    <audio id="audio">
+                        <p>您的浏览器不支持HTML5播放器！</p>
+                    </audio>
+                    <img src="images/1.jpg">
+                </div>
+            </div>
+            <b class="play"><em>&nbsp;</em></b>
+        </div>
+        <div class="time">-00:00</div>
+        <div class="track-details">
+            <span class="music_name"></span> 
+                <em>by</em> 
+            <span class="artist_name"></span>
+        </div>
+        <div class="control">
+            <span class="volume">音量开</span>
+            <span class="prev">上一首</span>
+            <span class="next">下一首</span>
+            <span class="repeat musicmode">循环</span>
+            <span class="shuffle musicmode">随机</span>
+            <span class="list musicmode">列表</span>
+        </div>
+        <script type="text/javascript" src="http://cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                Player();
+            })
+        </script>
+     </body>
+ </html>
