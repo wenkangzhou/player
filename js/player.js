@@ -1,5 +1,5 @@
 /*
-*TODO 按钮的UI
+*TODO 按钮的UI、参数容错
 */
 ;(function (exports){
 	var Player = function (el, config){
@@ -341,7 +341,7 @@
 	}
 	//输出
 	exports.Player = function (config){
-		var opts = extend({}, defConfig, config);
+		var opts = extend({}, config, defConfig);
 		return new Player($(opts.scope),opts);
 	}
 
